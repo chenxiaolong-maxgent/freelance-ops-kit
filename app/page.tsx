@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowRight, Check, FileCheck2, FolderKanban, Gauge, PackageCheck, ReceiptText, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Calculator, Check, FileCheck2, FolderKanban, Gauge, PackageCheck, ReceiptText, ShieldCheck } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 
@@ -21,6 +21,13 @@ const PRODUCTS = [
   },
   {
     step: '03',
+    title: '每周复盘，把真实利润算清楚',
+    product: 'ProfitLens PRO',
+    detail: 'Excel 项目利润系统，把费率、成本、工时和免费加需求一起算进去。',
+    icon: Calculator,
+  },
+  {
+    step: '04',
     title: '开票以后，盯到钱真正到账',
     product: 'CashRadar PRO',
     detail: 'Excel 回款系统，追踪应收、逾期、现金流与催款动作。',
@@ -52,20 +59,20 @@ export default function Home() {
         <div className="grid overflow-hidden rounded-[30px] border border-border bg-card shadow-[0_28px_85px_rgba(24,39,52,0.09)] lg:grid-cols-[1.02fr_0.98fr]">
           <div className="p-6 sm:p-10 lg:p-14">
             <div className="inline-flex items-center gap-2 rounded-full bg-accent/14 px-3 py-1 text-xs font-bold text-accent-foreground">
-              <PackageCheck className="size-3.5" /> 3 个完整商品 + 独家成交回款工作流
+              <PackageCheck className="size-3.5" /> 4 个完整商品 + 独家成交回款工作流
             </div>
-            <h1 className="mt-6 max-w-3xl text-4xl font-semibold tracking-[-0.05em] sm:text-6xl">别让项目在报价、加需求和回款三个地方漏钱。</h1>
+            <h1 className="mt-6 max-w-3xl text-4xl font-semibold tracking-[-0.05em] sm:text-6xl">别让项目在报价、加需求、利润和回款四个地方漏钱。</h1>
             <p className="mt-5 max-w-2xl text-base leading-7 text-muted-foreground">从第一次报价到尾款到账，一套覆盖自由职业项目完整经营链路的可编辑工具包。不是零散模板，而是一条可以照着执行的工作流。</p>
 
             <ul className="mt-7 grid gap-3 text-sm sm:grid-cols-2">
               <li className="flex items-center gap-2"><Check className="size-4 text-primary" /> 9 份 Word 行业模板</li>
-              <li className="flex items-center gap-2"><Check className="size-4 text-primary" /> 1 套 Excel 回款系统</li>
+              <li className="flex items-center gap-2"><Check className="size-4 text-primary" /> 2 套 Excel 经营系统</li>
               <li className="flex items-center gap-2"><Check className="size-4 text-primary" /> 12 套催款沟通话术</li>
               <li className="flex items-center gap-2"><Check className="size-4 text-primary" /> 7 天落地工作流指南</li>
             </ul>
 
             <div className="mt-9 flex flex-col gap-4 border-t border-border pt-7 sm:flex-row sm:items-center">
-              <div><p className="text-xs text-muted-foreground">首批 20 份早鸟价</p><div className="mt-1 flex items-end gap-3"><span className="text-5xl font-semibold tracking-[-0.05em] text-primary">¥69</span><span className="pb-1 text-sm text-muted-foreground line-through">单买合计 ¥77</span></div></div>
+              <div><p className="text-xs text-muted-foreground">首批 20 份早鸟价</p><div className="mt-1 flex items-end gap-3"><span className="text-5xl font-semibold tracking-[-0.05em] text-primary">¥69</span><span className="pb-1 text-sm text-muted-foreground line-through">单买合计 ¥106</span></div></div>
               <Button size="lg" className="h-12 px-6 sm:ml-auto" onClick={() => document.querySelector('#bundle')?.scrollIntoView({ behavior: 'smooth' })}>
                 查看完整内容 <ArrowRight className="size-4" />
               </Button>
@@ -75,8 +82,8 @@ export default function Home() {
           <div className="ops-grid relative bg-[#18293b] p-6 text-[#f8f2e6] sm:p-9 lg:p-12">
             <div className="relative">
               <div className="mb-6 flex items-center justify-between">
-                <div><p className="text-xs font-bold uppercase tracking-[0.2em] text-[#f3a35c]">Money leak control</p><p className="mt-2 text-sm text-[#b8c5cf]">一条工作流，守住三道利润关口</p></div>
-                <span className="rounded-full border border-white/12 bg-white/6 px-3 py-1 text-xs text-[#d9e1e6]">01 → 02 → 03</span>
+                <div><p className="text-xs font-bold uppercase tracking-[0.2em] text-[#f3a35c]">Money leak control</p><p className="mt-2 text-sm text-[#b8c5cf]">一条工作流，守住四道利润关口</p></div>
+                <span className="rounded-full border border-white/12 bg-white/6 px-3 py-1 text-xs text-[#d9e1e6]">01 → 02 → 03 → 04</span>
               </div>
 
               <div className="space-y-4">
@@ -96,11 +103,11 @@ export default function Home() {
 
       <section id="bundle" className="mx-auto max-w-[1400px] px-5 pb-12 lg:px-8 lg:pb-16">
         <div className="mb-7 flex flex-col justify-between gap-4 md:flex-row md:items-end">
-          <div><p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">What is inside</p><h2 className="mt-3 text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">买到的是三个完整商品，不是阉割版。</h2></div>
-          <p className="max-w-md text-sm leading-6 text-muted-foreground">每个子产品都保留原说明、授权、字体或模板文件。组合包额外提供一份把三套工具串起来的工作流。</p>
+          <div><p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">What is inside</p><h2 className="mt-3 text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">买到的是四个完整商品，不是阉割版。</h2></div>
+          <p className="max-w-md text-sm leading-6 text-muted-foreground">每个子产品都保留原说明、授权、字体或模板文件。组合包额外提供一份把四套工具串起来的工作流。</p>
         </div>
 
-        <div className="grid gap-4 lg:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {PRODUCTS.map(({ step, product, detail, icon: Icon }, index) => (
             <article className="rounded-[24px] border border-border bg-card p-6" key={step}>
               <div className="flex items-center justify-between"><span className="grid size-11 place-items-center rounded-xl bg-secondary text-secondary-foreground"><Icon className="size-5" /></span><span className="text-xs font-bold text-muted-foreground">商品 {step}</span></div>
@@ -109,7 +116,8 @@ export default function Home() {
               <ul className="mt-5 space-y-2.5 border-t border-border pt-5 text-sm">
                 {index === 0 && <><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 6 个行业 · 12 页模板</li><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 付款、验收与合作边界</li></>}
                 {index === 1 && <><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 3 个行业 · 6 页模板</li><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 新增范围、费用与工期影响</li></>}
-                {index === 2 && <><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 6 张工作表 · 100 行台账</li><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 8 个指标 · 12 套催款话术</li></>}
+                {index === 2 && <><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 5 张工作表 · 100 行台账</li><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 经济利润 · 有效时薪 · 变更费</li></>}
+                {index === 3 && <><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 6 张工作表 · 100 行台账</li><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 8 个指标 · 12 套催款话术</li></>}
               </ul>
             </article>
           ))}
@@ -120,17 +128,17 @@ export default function Home() {
         <div className="mx-auto grid max-w-[1400px] gap-8 px-5 py-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-8 lg:py-16">
           <figure className="overflow-hidden rounded-[24px] border border-primary/15 bg-[#18293b] shadow-[0_24px_65px_rgba(26,40,53,0.16)]">
             <img src="og.png" alt="接单经营全家桶：报价、变更、回款" className="h-auto w-full" loading="lazy" />
-            <figcaption className="border-t border-white/8 bg-[#18293b] px-5 py-3 text-center text-xs text-[#aebbc5]">完整交付包约 54 MB · 付费源文件不会公开下载</figcaption>
+            <figcaption className="border-t border-white/8 bg-[#18293b] px-5 py-3 text-center text-xs text-[#aebbc5]">完整交付包约 54 MB · 4 个付费商品源文件不会公开下载</figcaption>
           </figure>
 
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">Exclusive workflow</p>
             <h2 className="mt-3 text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">额外的一份指南，告诉你什么时候用哪一个。</h2>
-            <p className="mt-4 text-sm leading-6 text-muted-foreground">《成交回款工作流》不是产品目录，而是一条从底价测算、发报价、确认变更到追踪回款的操作顺序。</p>
+            <p className="mt-4 text-sm leading-6 text-muted-foreground">《成交回款工作流》不是产品目录，而是一条从底价测算、发报价、确认变更、利润复盘到追踪回款的操作顺序。</p>
             <div className="mt-6 grid gap-3 sm:grid-cols-2">
               <div className="rounded-2xl bg-card p-4"><p className="font-semibold">触发条件</p><p className="mt-1 text-xs leading-5 text-muted-foreground">什么时候应该发变更单，什么时候开始催款。</p></div>
               <div className="rounded-2xl bg-card p-4"><p className="font-semibold">文件结构</p><p className="mt-1 text-xs leading-5 text-muted-foreground">报价、素材、交付、变更、发票各归其位。</p></div>
-              <div className="rounded-2xl bg-card p-4"><p className="font-semibold">每周复盘</p><p className="mt-1 text-xs leading-5 text-muted-foreground">20 分钟检查底价、范围、逾期和现金到账。</p></div>
+              <div className="rounded-2xl bg-card p-4"><p className="font-semibold">每周复盘</p><p className="mt-1 text-xs leading-5 text-muted-foreground">20 分钟检查底价、范围、真实利润、逾期和现金到账。</p></div>
               <div className="rounded-2xl bg-card p-4"><p className="font-semibold">7 天落地</p><p className="mt-1 text-xs leading-5 text-muted-foreground">每天完成一个动作，把工具真正放进项目。</p></div>
             </div>
           </div>
@@ -153,9 +161,9 @@ export default function Home() {
 
       <section className="bg-[#18293b] text-[#f8f2e6]">
         <div className="mx-auto grid max-w-[1400px] gap-8 px-5 py-12 lg:grid-cols-[1fr_460px] lg:items-center lg:px-8 lg:py-16">
-          <div><p className="text-xs font-bold uppercase tracking-[0.18em] text-[#f3a35c]">Early bird bundle</p><h2 className="mt-3 max-w-3xl text-3xl font-semibold tracking-[-0.04em] sm:text-5xl">用一顿饭的钱，把三处漏钱点都补上。</h2><p className="mt-4 max-w-2xl text-sm leading-6 text-[#afbdc7]">报价匠 PRO ¥29 + ScopeGuard PRO ¥19 + CashRadar PRO ¥29，单买早鸟合计 ¥77。组合包 ¥69，并额外包含独家工作流。</p></div>
+          <div><p className="text-xs font-bold uppercase tracking-[0.18em] text-[#f3a35c]">Early bird bundle</p><h2 className="mt-3 max-w-3xl text-3xl font-semibold tracking-[-0.04em] sm:text-5xl">用一顿饭的钱，把四处漏钱点都补上。</h2><p className="mt-4 max-w-2xl text-sm leading-6 text-[#afbdc7]">报价匠 PRO ¥29 + ScopeGuard PRO ¥19 + ProfitLens PRO ¥29 + CashRadar PRO ¥29，单买早鸟合计 ¥106。组合包仍为 ¥69，并额外包含独家工作流。</p></div>
           <div className="rounded-[26px] border border-white/12 bg-white/7 p-6 sm:p-7">
-            <div className="flex items-end justify-between"><div><p className="text-sm text-[#c3ced6]">首批 20 份</p><p className="mt-1 text-5xl font-semibold tracking-[-0.05em]">¥69</p></div><span className="rounded-full bg-[#f3a35c] px-3 py-1 text-xs font-bold text-[#18293b]">省 ¥8 + 独家指南</span></div>
+            <div className="flex items-end justify-between"><div><p className="text-sm text-[#c3ced6]">首批 20 份</p><p className="mt-1 text-5xl font-semibold tracking-[-0.05em]">¥69</p></div><span className="rounded-full bg-[#f3a35c] px-3 py-1 text-xs font-bold text-[#18293b]">省 ¥37 + 独家指南</span></div>
             <Button size="lg" className="mt-6 h-12 w-full bg-[#f3a35c] text-base text-[#18293b] hover:bg-[#ffc188]" onClick={() => window.open('https://github.com/chenxiaolong-maxgent/freelance-ops-kit/issues/1', '_blank', 'noopener,noreferrer')}>
               登记 ¥69 全家桶 <ArrowRight className="size-4" />
             </Button>
@@ -168,7 +176,7 @@ export default function Home() {
         <p className="text-center text-xs font-bold uppercase tracking-[0.18em] text-primary">FAQ</p>
         <h2 className="mt-3 text-center text-3xl font-semibold tracking-[-0.04em]">购买前常见问题</h2>
         <div className="mt-8 divide-y divide-border rounded-[24px] border border-border bg-card px-5 sm:px-7">
-          <div className="py-5"><h3 className="font-semibold">文件可以编辑吗？</h3><p className="mt-2 text-sm leading-6 text-muted-foreground">可以。报价单和变更单是 Word 源文件，回款系统是 Excel 源文件；可修改文字、颜色和字段。</p></div>
+          <div className="py-5"><h3 className="font-semibold">文件可以编辑吗？</h3><p className="mt-2 text-sm leading-6 text-muted-foreground">可以。报价单和变更单是 Word 源文件，回款与利润系统是 Excel 源文件；可修改文字、颜色和字段。</p></div>
           <div className="py-5"><h3 className="font-semibold">可以给团队使用吗？</h3><p className="mt-2 text-sm leading-6 text-muted-foreground">可以用于购买者本人或同一团队的商业项目，但不能公开分享、转售或作为模板产品重新分发。</p></div>
           <div className="py-5"><h3 className="font-semibold">Google Docs 和 Sheets 能打开吗？</h3><p className="mt-2 text-sm leading-6 text-muted-foreground">可以导入，但复杂版式、原生图表或条件格式可能出现轻微差异，优先推荐 Microsoft Word 与 Excel。</p></div>
           <div className="py-5"><h3 className="font-semibold">登记后会自动扣款吗？</h3><p className="mt-2 text-sm leading-6 text-muted-foreground">不会。登记页只收集购买意向；双方确认交付方式和收款方式后再完成交易。</p></div>
