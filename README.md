@@ -1,6 +1,6 @@
 # 接单经营全家桶 · Freelance Ops Kit
 
-把报价匠 PRO、ScopeGuard PRO、RetainerFit PRO、ProfitLens PRO 和 CashRadar PRO 组合成一套从报价到长期续费和尾款到账的自由职业经营工具包。
+把报价匠 PRO、ScopeGuard PRO、RetainerFit PRO、ProfitLens PRO、CashRadar PRO 和 ProofLoop PRO 组合成一套从报价、长期续费、尾款到账到客户口碑的自由职业经营工具包。
 
 ## 商品内容
 
@@ -9,6 +9,7 @@
 - RetainerFit PRO：3 份可编辑 Word 月费提案、范围管理、复盘与续费模板
 - ProfitLens PRO：Excel 项目利润、有效时薪与免费加需求跟踪系统
 - CashRadar PRO：Excel 回款、逾期与现金流系统
-- 独家《成交回款工作流》：触发条件、文件结构、每周复盘和 7 天落地清单
+- ProofLoop PRO：3 份可编辑 Word 评价、案例、转介绍与授权模板
+- 独家《成交回款口碑工作流》：触发条件、文件结构、每周复盘和 7 天落地清单
 
-早鸟价仍为 ¥69，单买早鸟价合计 ¥145。完整交付 ZIP 不进入公开代码仓库；公开页只提供内容说明、预览和购买登记。
+早鸟价仍为 ¥69，6 个商品单买早鸟价合计 ¥174。完整交付 ZIP 不进入公开代码仓库；公开页只提供内容说明、预览和购买登记。
