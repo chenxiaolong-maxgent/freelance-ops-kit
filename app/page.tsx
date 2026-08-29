@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowRight, BadgeCheck, Calculator, Check, ClipboardCheck, FileCheck2, FolderKanban, Gauge, ListChecks, MessageSquareQuote, PackageCheck, RadioTower, ReceiptText, Repeat2, ScanSearch, ShieldCheck } from 'lucide-react';
+import { ArrowRight, BadgeCheck, Calculator, CalendarRange, Check, ClipboardCheck, FileCheck2, FolderKanban, Gauge, ListChecks, MessageSquareQuote, PackageCheck, RadioTower, ReceiptText, Repeat2, ScanSearch, ShieldCheck } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 
@@ -14,69 +14,76 @@ const PRODUCTS = [
   },
   {
     step: '02',
+    title: '答应开工之前，先看未来四周余量',
+    product: 'CapacityFlow PRO',
+    detail: 'Excel 项目产能系统，把项目、任务与 13 周可用工时放进同一张负载地图。',
+    icon: CalendarRange,
+  },
+  {
+    step: '03',
     title: '先把价格和边界写清楚',
     product: '报价匠 PRO',
     detail: '6 个行业的 Word 报价模板，写清交付、付款、验收和合作边界。',
     icon: ReceiptText,
   },
   {
-    step: '03',
+    step: '04',
     title: '临时加需求，先确认再开工',
     product: 'ScopeGuard PRO',
     detail: '3 个行业的需求变更单，把新增范围、费用与时间影响留成记录。',
     icon: FileCheck2,
   },
   {
-    step: '04',
+    step: '05',
     title: '签约以后，把启动条件一次对齐',
     product: 'KickoffFlow PRO',
     detail: '3 份 Word 模板，覆盖资料清单、启动会议、角色权限与首周推进。',
     icon: ClipboardCheck,
   },
   {
-    step: '05',
+    step: '06',
     title: '收到多人反馈，先收口再改稿',
     product: 'ReviewDock PRO',
     detail: '3 份 Word 模板，覆盖反馈入口、冲突决定、改稿台账、版本确认与下一轮审批。',
     icon: ListChecks,
   },
   {
-    step: '06',
+    step: '07',
     title: '客户还没追问，先把进度说清楚',
     product: 'StatusPulse PRO',
     detail: '3 份 Word 模板，覆盖客户周报、风险延迟、决策请求、月度复盘与下阶段计划。',
     icon: RadioTower,
   },
   {
-    step: '07',
+    step: '08',
     title: '把项目费变成可续的月费方案',
     product: 'RetainerFit PRO',
     detail: '3 份 Word 模板，覆盖三档提案、范围规则、月度复盘与续费沟通。',
     icon: Repeat2,
   },
   {
-    step: '08',
+    step: '09',
     title: '每周复盘，把真实利润算清楚',
     product: 'ProfitLens PRO',
     detail: 'Excel 项目利润系统，把费率、成本、工时和免费加需求一起算进去。',
     icon: Calculator,
   },
   {
-    step: '09',
+    step: '10',
     title: '正式交付，把验收和尾款节点写清楚',
     product: 'SignoffFlow PRO',
     detail: '3 份 Word 模板，覆盖交付清单、验收确认、尾款推进、权限移交与项目归档。',
     icon: BadgeCheck,
   },
   {
-    step: '10',
+    step: '11',
     title: '开票以后，盯到钱真正到账',
     product: 'CashRadar PRO',
     detail: 'Excel 回款系统，追踪应收、逾期、现金流与催款动作。',
     icon: Gauge,
   },
   {
-    step: '11',
+    step: '12',
     title: '交付以后，把好结果变成下一次成交',
     product: 'ProofLoop PRO',
     detail: '3 份 Word 模板，覆盖评价索取、案例访谈、转介绍请求与公开授权边界。',
@@ -108,20 +115,20 @@ export default function Home() {
         <div className="grid overflow-hidden rounded-[30px] border border-border bg-card shadow-[0_28px_85px_rgba(24,39,52,0.09)] lg:grid-cols-[1.02fr_0.98fr]">
           <div className="p-6 sm:p-10 lg:p-14">
             <div className="inline-flex items-center gap-2 rounded-full bg-accent/14 px-3 py-1 text-xs font-bold text-accent-foreground">
-              <PackageCheck className="size-3.5" /> 11 个完整商品 + 独家项目经营工作流
+              <PackageCheck className="size-3.5" /> 12 个完整商品 + 独家项目经营工作流
             </div>
-            <h1 className="mt-6 max-w-3xl text-4xl font-semibold tracking-[-0.05em] sm:text-6xl">从访谈到口碑，一套把十一处漏钱点补齐。</h1>
-            <p className="mt-5 max-w-2xl text-base leading-7 text-muted-foreground">从第一次需求访谈、报价、客户启动、反馈改稿、主动进度汇报、长期续费、范围与利润管理，到正式验收、尾款到账和客户口碑，一套覆盖自由职业项目完整经营链路的可编辑工具包。</p>
+            <h1 className="mt-6 max-w-3xl text-4xl font-semibold tracking-[-0.05em] sm:text-6xl">从访谈到口碑，一套把十二处漏钱点补齐。</h1>
+            <p className="mt-5 max-w-2xl text-base leading-7 text-muted-foreground">从第一次需求访谈、产能排期、报价、客户启动、反馈改稿、主动进度汇报、长期续费、范围与利润管理，到正式验收、尾款到账和客户口碑，一套覆盖自由职业项目完整经营链路的可编辑工具包。</p>
 
             <ul className="mt-7 grid gap-3 text-sm sm:grid-cols-2">
               <li className="flex items-center gap-2"><Check className="size-4 text-primary" /> 30 份可编辑 Word 模板</li>
-              <li className="flex items-center gap-2"><Check className="size-4 text-primary" /> 2 套 Excel 经营系统</li>
+              <li className="flex items-center gap-2"><Check className="size-4 text-primary" /> 3 套 Excel 经营系统</li>
               <li className="flex items-center gap-2"><Check className="size-4 text-primary" /> 12 套催款沟通话术</li>
               <li className="flex items-center gap-2"><Check className="size-4 text-primary" /> 评价、案例、转介绍完整流程</li>
             </ul>
 
             <div className="mt-9 flex flex-col gap-4 border-t border-border pt-7 sm:flex-row sm:items-center">
-              <div><p className="text-xs text-muted-foreground">首批 20 份早鸟价</p><div className="mt-1 flex items-end gap-3"><span className="text-5xl font-semibold tracking-[-0.05em] text-primary">¥69</span><span className="pb-1 text-sm text-muted-foreground line-through">单买合计 ¥319</span></div></div>
+              <div><p className="text-xs text-muted-foreground">首批 20 份早鸟价</p><div className="mt-1 flex items-end gap-3"><span className="text-5xl font-semibold tracking-[-0.05em] text-primary">¥69</span><span className="pb-1 text-sm text-muted-foreground line-through">单买合计 ¥348</span></div></div>
               <Button size="lg" className="h-12 px-6 sm:ml-auto" onClick={() => document.querySelector('#bundle')?.scrollIntoView({ behavior: 'smooth' })}>
                 查看完整内容 <ArrowRight className="size-4" />
               </Button>
@@ -131,8 +138,8 @@ export default function Home() {
           <div className="ops-grid relative bg-[#18293b] p-6 text-[#f8f2e6] sm:p-9 lg:p-12">
             <div className="relative">
               <div className="mb-6 flex items-center justify-between">
-                <div><p className="text-xs font-bold uppercase tracking-[0.2em] text-[#f3a35c]">Money leak control</p><p className="mt-2 text-sm text-[#b8c5cf]">一条工作流，守住十一个经营节点</p></div>
-                <span className="rounded-full border border-white/12 bg-white/6 px-3 py-1 text-xs text-[#d9e1e6]">01 → 02 → 03 → 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11</span>
+                <div><p className="text-xs font-bold uppercase tracking-[0.2em] text-[#f3a35c]">Money leak control</p><p className="mt-2 text-sm text-[#b8c5cf]">一条工作流，守住十二个经营节点</p></div>
+                <span className="rounded-full border border-white/12 bg-white/6 px-3 py-1 text-xs text-[#d9e1e6]">01 → 02 → 03 → 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12</span>
               </div>
 
               <div className="space-y-4">
@@ -152,8 +159,8 @@ export default function Home() {
 
       <section id="bundle" className="mx-auto max-w-[1400px] px-5 pb-12 lg:px-8 lg:pb-16">
         <div className="mb-7 flex flex-col justify-between gap-4 md:flex-row md:items-end">
-          <div><p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">What is inside</p><h2 className="mt-3 text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">买到的是十一个完整商品，不是阉割版。</h2></div>
-          <p className="max-w-md text-sm leading-6 text-muted-foreground">每个子产品都保留原说明、授权、字体或模板文件。组合包额外提供一份把十一套工具串起来的工作流。</p>
+          <div><p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">What is inside</p><h2 className="mt-3 text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">买到的是十二个完整商品，不是阉割版。</h2></div>
+          <p className="max-w-md text-sm leading-6 text-muted-foreground">每个子产品都保留原说明、授权、字体或模板文件。组合包额外提供一份把十二套工具串起来的工作流。</p>
         </div>
 
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -164,16 +171,17 @@ export default function Home() {
               <p className="mt-2 min-h-12 text-sm leading-6 text-muted-foreground">{detail}</p>
               <ul className="mt-5 space-y-2.5 border-t border-border pt-5 text-sm">
                 {index === 0 && <><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 3 份 Word · 共 9 页</li><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 问卷 · 访谈 · 纪要 · 需求基线</li></>}
-                {index === 1 && <><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 6 个行业 · 12 页模板</li><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 付款、验收与合作边界</li></>}
-                {index === 2 && <><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 3 个行业 · 6 页模板</li><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 新增范围、费用与工期影响</li></>}
-                {index === 3 && <><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 3 份 Word · 共 9 页</li><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 资料 · 会议 · 权限 · 首周</li></>}
-                {index === 4 && <><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 3 份 Word · 共 9 页</li><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 收集 · 冲突 · 台账 · 确认</li></>}
-                {index === 5 && <><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 3 份 Word · 共 9 页</li><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 周报 · 风险 · 决策 · 月度复盘</li></>}
-                {index === 6 && <><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 3 份 Word · 共 8 页</li><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 三档提案 · 范围 · 续费</li></>}
-                {index === 7 && <><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 5 张工作表 · 100 行台账</li><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 经济利润 · 有效时薪 · 变更费</li></>}
-                {index === 8 && <><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 3 份 Word · 共 9 页</li><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 交付 · 验收 · 尾款 · 归档</li></>}
-                {index === 9 && <><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 6 张工作表 · 100 行台账</li><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 8 个指标 · 12 套催款话术</li></>}
-                {index === 10 && <><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 3 份 Word · 共 10 页</li><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 评价 · 案例 · 转介绍 · 授权</li></>}
+                {index === 1 && <><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 6 张工作表 · 13 周容量</li><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 项目 · 任务 · 超载预警</li></>}
+                {index === 2 && <><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 6 个行业 · 12 页模板</li><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 付款、验收与合作边界</li></>}
+                {index === 3 && <><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 3 个行业 · 6 页模板</li><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 新增范围、费用与工期影响</li></>}
+                {index === 4 && <><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 3 份 Word · 共 9 页</li><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 资料 · 会议 · 权限 · 首周</li></>}
+                {index === 5 && <><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 3 份 Word · 共 9 页</li><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 收集 · 冲突 · 台账 · 确认</li></>}
+                {index === 6 && <><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 3 份 Word · 共 9 页</li><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 周报 · 风险 · 决策 · 月度复盘</li></>}
+                {index === 7 && <><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 3 份 Word · 共 8 页</li><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 三档提案 · 范围 · 续费</li></>}
+                {index === 8 && <><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 5 张工作表 · 100 行台账</li><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 经济利润 · 有效时薪 · 变更费</li></>}
+                {index === 9 && <><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 3 份 Word · 共 9 页</li><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 交付 · 验收 · 尾款 · 归档</li></>}
+                {index === 10 && <><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 6 张工作表 · 100 行台账</li><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 8 个指标 · 12 套催款话术</li></>}
+                {index === 11 && <><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 3 份 Word · 共 10 页</li><li className="flex gap-2"><Check className="mt-0.5 size-4 text-primary" /> 评价 · 案例 · 转介绍 · 授权</li></>}
               </ul>
             </article>
           ))}
@@ -185,13 +193,13 @@ export default function Home() {
           <figure className="overflow-hidden rounded-[24px] border border-primary/15 bg-[#18293b] shadow-[0_24px_65px_rgba(26,40,53,0.16)]">
             {/* oxlint-disable-next-line next/no-img-element -- shared static asset is reused by both Vinext and GitHub Pages builds */}
             <img src="og.png" alt="接单经营全家桶：报价、变更、回款" className="h-auto w-full" loading="lazy" />
-            <figcaption className="border-t border-white/8 bg-[#18293b] px-5 py-3 text-center text-xs text-[#aebbc5]">完整交付包约 240 MB · 11 个付费商品源文件不会公开下载</figcaption>
+            <figcaption className="border-t border-white/8 bg-[#18293b] px-5 py-3 text-center text-xs text-[#aebbc5]">完整交付包约 267 MB · 12 个付费商品源文件不会公开下载</figcaption>
           </figure>
 
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">Exclusive workflow</p>
             <h2 className="mt-3 text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">额外的一份指南，告诉你什么时候用哪一个。</h2>
-            <p className="mt-4 text-sm leading-6 text-muted-foreground">《项目经营工作流》不是产品目录，而是一条从需求访谈、底价测算、发报价、项目启动、收口反馈、主动汇报、确认变更、利润复盘、正式验收、追踪回款到索取口碑的操作顺序。</p>
+            <p className="mt-4 text-sm leading-6 text-muted-foreground">《项目经营工作流》不是产品目录，而是一条从需求访谈、产能排期、底价测算、发报价、项目启动、收口反馈、主动汇报、确认变更、利润复盘、正式验收、追踪回款到索取口碑的操作顺序。</p>
             <div className="mt-6 grid gap-3 sm:grid-cols-2">
               <div className="rounded-2xl bg-card p-4"><p className="font-semibold">触发条件</p><p className="mt-1 text-xs leading-5 text-muted-foreground">什么时候应该发变更单，什么时候开始催款。</p></div>
               <div className="rounded-2xl bg-card p-4"><p className="font-semibold">文件结构</p><p className="mt-1 text-xs leading-5 text-muted-foreground">报价、素材、交付、变更、发票各归其位。</p></div>
@@ -218,9 +226,9 @@ export default function Home() {
 
       <section className="bg-[#18293b] text-[#f8f2e6]">
         <div className="mx-auto grid max-w-[1400px] gap-8 px-5 py-12 lg:grid-cols-[1fr_460px] lg:items-center lg:px-8 lg:py-16">
-          <div><p className="text-xs font-bold uppercase tracking-[0.18em] text-[#f3a35c]">Early bird bundle</p><h2 className="mt-3 max-w-3xl text-3xl font-semibold tracking-[-0.04em] sm:text-5xl">用一顿饭的钱，把十一处漏钱点都补上。</h2><p className="mt-4 max-w-2xl text-sm leading-6 text-[#afbdc7]">BriefPilot PRO ¥29 + 报价匠 PRO ¥29 + ScopeGuard PRO ¥19 + KickoffFlow PRO ¥29 + ReviewDock PRO ¥29 + StatusPulse PRO ¥29 + RetainerFit PRO ¥39 + ProfitLens PRO ¥29 + SignoffFlow PRO ¥29 + CashRadar PRO ¥29 + ProofLoop PRO ¥29，单买早鸟合计 ¥319。组合包仍为 ¥69，并额外包含独家工作流。</p></div>
+          <div><p className="text-xs font-bold uppercase tracking-[0.18em] text-[#f3a35c]">Early bird bundle</p><h2 className="mt-3 max-w-3xl text-3xl font-semibold tracking-[-0.04em] sm:text-5xl">用一顿饭的钱，把十二处漏钱点都补上。</h2><p className="mt-4 max-w-2xl text-sm leading-6 text-[#afbdc7]">BriefPilot PRO ¥29 + CapacityFlow PRO ¥29 + 报价匠 PRO ¥29 + ScopeGuard PRO ¥19 + KickoffFlow PRO ¥29 + ReviewDock PRO ¥29 + StatusPulse PRO ¥29 + RetainerFit PRO ¥39 + ProfitLens PRO ¥29 + SignoffFlow PRO ¥29 + CashRadar PRO ¥29 + ProofLoop PRO ¥29，单买早鸟合计 ¥348。组合包仍为 ¥69，并额外包含独家工作流。</p></div>
           <div className="rounded-[26px] border border-white/12 bg-white/7 p-6 sm:p-7">
-            <div className="flex items-end justify-between"><div><p className="text-sm text-[#c3ced6]">首批 20 份</p><p className="mt-1 text-5xl font-semibold tracking-[-0.05em]">¥69</p></div><span className="rounded-full bg-[#f3a35c] px-3 py-1 text-xs font-bold text-[#18293b]">省 ¥250 + 独家指南</span></div>
+            <div className="flex items-end justify-between"><div><p className="text-sm text-[#c3ced6]">首批 20 份</p><p className="mt-1 text-5xl font-semibold tracking-[-0.05em]">¥69</p></div><span className="rounded-full bg-[#f3a35c] px-3 py-1 text-xs font-bold text-[#18293b]">省 ¥279 + 独家指南</span></div>
             <Button size="lg" className="mt-6 h-12 w-full bg-[#f3a35c] text-base text-[#18293b] hover:bg-[#ffc188]" onClick={() => window.open('https://github.com/chenxiaolong-maxgent/freelance-ops-kit/issues/1', '_blank', 'noopener,noreferrer')}>
               登记 ¥69 全家桶 <ArrowRight className="size-4" />
             </Button>
@@ -233,7 +241,7 @@ export default function Home() {
         <p className="text-center text-xs font-bold uppercase tracking-[0.18em] text-primary">FAQ</p>
         <h2 className="mt-3 text-center text-3xl font-semibold tracking-[-0.04em]">购买前常见问题</h2>
         <div className="mt-8 divide-y divide-border rounded-[24px] border border-border bg-card px-5 sm:px-7">
-          <div className="py-5"><h3 className="font-semibold">文件可以编辑吗？</h3><p className="mt-2 text-sm leading-6 text-muted-foreground">可以。访谈、报价、变更、启动、验收和口碑模板是 Word 源文件，回款与利润系统是 Excel 源文件；可修改文字、颜色和字段。</p></div>
+          <div className="py-5"><h3 className="font-semibold">文件可以编辑吗？</h3><p className="mt-2 text-sm leading-6 text-muted-foreground">可以。访谈、报价、变更、启动、验收和口碑模板是 Word 源文件，产能、回款与利润系统是 Excel 源文件；可修改文字、颜色和字段。</p></div>
           <div className="py-5"><h3 className="font-semibold">可以给团队使用吗？</h3><p className="mt-2 text-sm leading-6 text-muted-foreground">可以用于购买者本人或同一团队的商业项目，但不能公开分享、转售或作为模板产品重新分发。</p></div>
           <div className="py-5"><h3 className="font-semibold">Google Docs 和 Sheets 能打开吗？</h3><p className="mt-2 text-sm leading-6 text-muted-foreground">可以导入，但复杂版式、原生图表或条件格式可能出现轻微差异，优先推荐 Microsoft Word 与 Excel。</p></div>
           <div className="py-5"><h3 className="font-semibold">登记后会自动扣款吗？</h3><p className="mt-2 text-sm leading-6 text-muted-foreground">不会。登记页只收集购买意向；双方确认交付方式和收款方式后再完成交易。</p></div>
